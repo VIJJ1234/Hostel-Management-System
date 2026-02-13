@@ -1,4 +1,3 @@
-import React from 'react';
 
 const About = () => {
   return (
@@ -19,7 +18,7 @@ const About = () => {
             <div className="flex flex-wrap ">
               <div className="w-[300px] p-1">
                 <div className="bg-gray-200 p-4 rounded-lg shadow-md">
-                  <h3 className="text-xl font-semibold">Tarun Kataruka</h3>
+                  <h3 className="text-xl font-semibold">Vijay Kumar</h3>
                   <p className="text-gray-700">Software Engineer</p>
                 </div>
               </div>
@@ -37,7 +36,7 @@ const About = () => {
               </div>
               <div className="w-[300px] p-1">
                 <div className="bg-gray-200 p-4 rounded-lg shadow-md">
-                  <h3 className="text-xl font-semibold">Valmiki Vijay Kumar</h3>
+                  <h3 className="text-xl font-semibold">Manju</h3>
                   <p className="text-gray-700">Software Engineer</p>
                 </div>
               </div>

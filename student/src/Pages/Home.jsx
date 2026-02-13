@@ -44,7 +44,7 @@ const Home = () => {
         </div>
       </section> */}
       <footer className="home-footer">
-        <p>&copy; 2024 Hostel Management System. All rights reserved.</p>
+        <p>&copy; 2025 Hostel Management System. All rights reserved.</p>
       </footer>
     </div>
   );

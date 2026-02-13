@@ -4,7 +4,6 @@ import axios from 'axios';
 const Complaint = () => {
     const [complaints, setComplaints] = useState([]);
     const [message, setMessage] = useState('');
-
     useEffect(() => {
         const fetchComplaints = async () => {
             try {
@@ -14,7 +13,6 @@ const Complaint = () => {
                 setMessage('Error fetching complaints');
             }
         };
-
         fetchComplaints();
     }, []);
 

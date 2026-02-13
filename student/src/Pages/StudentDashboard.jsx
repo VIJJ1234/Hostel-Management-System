@@ -77,7 +77,7 @@ const StudentDashboard = () => {
             <h2 className="text-2xl font-bold mb-4">Complaints</h2>
             {complaints.length === 0 ? (
               <div className="text-center">
-                <p className="mb-4">No complaints filed yet.</p>
+                <p className="mb-4">No complaints filled yet.</p>
               </div>
             ) : (
               <div className="space-y-4">

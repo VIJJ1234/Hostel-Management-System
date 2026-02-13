@@ -29,7 +29,7 @@ const AdminDasboard = () => {
       <header className="home-header">
         <h1>WELCOME WARDEN</h1>
       </header>
-      {/* <section className="home-content">
+       {/* <section className="home-content">
         <div className="home-card">
           <h2>About</h2>
         </div>  
@@ -42,9 +42,9 @@ const AdminDasboard = () => {
         <div className="home-card">
           <h2>Student Login</h2>
         </div>
-      </section> */}
+      </section>  */}
       <footer className="home-footer">
-        <p>&copy; 2024 Hostel Management System. All rights reserved.</p>
+        <p>&copy; 2025 Hostel Management System. All rights reserved.</p>
       </footer>
     </div>
   );

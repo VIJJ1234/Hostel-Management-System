@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import { useEffect, useState } from 'react';
 
 const FoodMenu = () => {
   const [menu, setMenu] = useState(null);
@@ -13,14 +13,19 @@ const FoodMenu = () => {
         const currentDay = days[today.getDay()];
 
         const response = await axios.get('http://localhost:5000/api/foodMenu');
-        const todaysMenu = response.data.find(menu => menu.day === currentDay);
-        
+        console.log('Menu data from backend:', response.data);
+
+        const todaysMenu = response.data.find(menu => 
+          menu.day.toLowerCase() === currentDay.toLowerCase()
+        );
+
         if (todaysMenu) {
           setMenu(todaysMenu);
         } else {
           setError('No menu available for today');
         }
       } catch (error) {
+        console.error(error);
         setError('There was an error fetching the menu');
       }
     };
@@ -35,7 +40,7 @@ const FoodMenu = () => {
   if (!menu) {
     return <div className="text-center mt-6">Loading...</div>;
   }
-
+  
   return (
     <div className="mx-auto my-2 p-2 bg-gradient-to-r from-green-200 to-blue-200 shadow-lg rounded-lg h-[450px]">
       <h2 className="text-2xl font-bold text-center mb-2 text-green-700">Today's Food Menu</h2>
