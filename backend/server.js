@@ -19,11 +19,9 @@ connectDB();
 
 // Middleware
 const allowedOrigins = [
-  "https://student-pi-nine.vercel.app",   // Student App
-  "https://admin-lilac-omega.vercel.app/" // Replace with real Admin URL
+  "https://student-pi-nine.vercel.app",
+  "https://admin-lilac-omega.vercel.app"
 ];
-// https://student-pi-nine.vercel.app/
-// https://admin-lilac-omega.vercel.app/
 
 app.use(cors({
   origin: function (origin, callback) {
@@ -36,6 +34,7 @@ app.use(cors({
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
 }));
+
 
 
 // app.use(cors({
