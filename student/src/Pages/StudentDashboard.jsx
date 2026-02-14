@@ -20,7 +20,7 @@ const StudentDashboard = () => {
           throw new Error('User not authenticated');
         }
 
-        const profileResponse = await axios.get('http://localhost:5000/api/students/profile', {
+        const profileResponse = await axios.get(`${import.meta.env.VITE_API_URL}/api/students/profile`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -31,7 +31,7 @@ const StudentDashboard = () => {
           throw new Error('Student ID not found');
         }
 
-        const complaintsResponse = await axios.get(`http://localhost:5000/api/complaints?id=${studentId}`, {
+        const complaintsResponse = await axios.get(`${import.meta.env.VITE_API_URL}/api/complaints?id=${studentId}`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },

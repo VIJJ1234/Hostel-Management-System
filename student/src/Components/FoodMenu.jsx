@@ -12,7 +12,7 @@ const FoodMenu = () => {
         const today = new Date();
         const currentDay = days[today.getDay()];
 
-        const response = await axios.get('http://localhost:5000/api/foodMenu');
+        const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/foodMenu`);
         console.log('Menu data from backend:', response.data);
 
         const todaysMenu = response.data.find(menu => 

@@ -15,7 +15,7 @@ const StudentProfile = () => {
         }
 
         // Add "Bearer " to the token!
-        const response = await axios.get('http://localhost:5000/api/students/profile', {
+        const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/students/profile`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },

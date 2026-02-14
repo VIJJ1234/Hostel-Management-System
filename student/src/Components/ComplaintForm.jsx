@@ -16,7 +16,7 @@ const ComplaintForm = () => {
           throw new Error('User not authenticated');
         }
 
-        const response = await axios.get('http://localhost:5000/api/students/profile', {
+        const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/students/profile`, {
           headers: {
             Authorization: token
           }
@@ -41,7 +41,7 @@ const ComplaintForm = () => {
         throw new Error('User not authenticated');
       }
 
-      const response = await axios.post('http://localhost:5000/api/complaints', {
+      const response = await axios.post(`${import.meta.env.VITE_API_URL}/api/complaints`, {
         studentId,
         complaint,
         roomNo

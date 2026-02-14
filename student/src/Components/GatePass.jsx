@@ -15,7 +15,7 @@ const GatePass = () => {
   useEffect(() => {
     const fetchGatePasses = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/gatePass');
+        const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/gatePass`);
         setGatePasses(response.data);
       } catch (error) {
         console.error('Error fetching gate passes:', error);
@@ -36,7 +36,7 @@ const GatePass = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post('http://localhost:5000/api/gatePass', formData);
+      const response = await axios.post(`${import.meta.env.VITE_API_URL}/api/gatePass`, formData);
       console.log('Gate pass application submitted:', response.data);
       setGatePasses([...gatePasses, response.data]);
       // Reset form fields after submission

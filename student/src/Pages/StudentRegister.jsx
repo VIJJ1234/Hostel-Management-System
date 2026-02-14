@@ -36,7 +36,7 @@ const StudentRegister = () => {
   const handleRegister = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:5000/api/students/signup', formData);
+      await axios.post(`${import.meta.env.VITE_API_URL}/api/students/signup`, formData);
       navigate('/student-login');
     } catch (error) {
       console.error('Registration error', error);
