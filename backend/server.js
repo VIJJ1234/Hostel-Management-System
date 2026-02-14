@@ -1,12 +1,12 @@
-import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
+import express from 'express';
 import connectDB from './config/db.js';
 
-import foodMenuRoutes from './routes/foodMenu.js';
 import complaints from './routes/complaints.js';
-import studentRoutes from './routes/students.js';
+import foodMenuRoutes from './routes/foodMenu.js';
 import gatePass from './routes/gatePass.js';
+import studentRoutes from './routes/students.js';
 
 // Load environment variables
 dotenv.config();
@@ -18,10 +18,29 @@ const app = express();
 connectDB();
 
 // Middleware
+const allowedOrigins = [
+  process.env.CLIENT_URL_1,
+  process.env.CLIENT_URL_2
+];
+
 app.use(cors({
-  origin: process.env.CLIENT_URL || "*",  // Allow frontend URL in production
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
   credentials: true
 }));
+
+
+// app.use(cors({
+//   origin: "http://localhost:5174",
+//   methods: ["GET", "POST", "PUT", "DELETE"],
+//   credentials: true
+// }));
+
 
 app.use(express.json());
 
