@@ -9,7 +9,7 @@ const GatePass = () => {
   useEffect(() => {
     const fetchGatePasses = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/gatePass');
+        const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/gatePass`);
         setGatePasses(response.data);
         setLoading(false);
       } catch (error) {
@@ -23,7 +23,7 @@ const GatePass = () => {
 
   const handleStatusChange = async (id, newStatus) => {
     try {
-      await axios.put(`http://localhost:5000/api/gatePass/${id}`, { status: newStatus });
+      await axios.put(`${import.meta.env.VITE_API_URL}/api/gatePass/${id}`, { status: newStatus });
       setGatePasses((prev) =>
         prev.map((pass) => (pass._id === id ? { ...pass, status: newStatus } : pass))
       );

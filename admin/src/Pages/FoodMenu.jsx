@@ -16,7 +16,7 @@ const FoodMenu = () => {
 
   const fetchMenus = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/foodMenu');
+      const res = await axios.get(`${import.meta.env.VITE_API_URL}/api/foodMenu`);
       setMenus(res.data);
     } catch (error) {
       console.error('Fetch menus error', error);
@@ -31,7 +31,7 @@ const FoodMenu = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:5000/api/foodMenu', menu);
+      await axios.post(`${import.meta.env.VITE_API_URL}/api/foodMenu`, menu);
       fetchMenus();
     } catch (error) {
       console.error('Submit menu error', error);
@@ -40,7 +40,7 @@ const FoodMenu = () => {
 
   const deleteMenu = async (day) => {
     try {
-      await axios.delete(`http://localhost:5000/api/foodMenu/${day}`);
+      await axios.delete(`${import.meta.env.VITE_API_URL}/api/foodMenu/${day}`);
       fetchMenus();
     } catch (error) {
       console.error('Delete menu error', error);

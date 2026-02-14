@@ -7,7 +7,7 @@ const Complaint = () => {
     useEffect(() => {
         const fetchComplaints = async () => {
             try {
-                const response = await axios.get('http://localhost:5000/api/complaints');
+                const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/complaints`);
                 setComplaints(response.data);
             } catch (error) {
                 setMessage('Error fetching complaints');
@@ -18,7 +18,7 @@ const Complaint = () => {
 
     const handleStatusChange = async (id, newStatus) => {
         try {
-            await axios.put(`http://localhost:5000/api/complaints/${id}`, { status: newStatus });
+            await axios.put(`${import.meta.env.VITE_API_URL}/api/complaints/${id}`, { status: newStatus });
             setComplaints((prev) =>
                 prev.map((complaint) =>
                     complaint._id === id ? { ...complaint, status: newStatus } : complaint

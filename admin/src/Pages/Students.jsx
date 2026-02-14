@@ -20,7 +20,7 @@ const Students = () => {
           Authorization: `Bearer ${token}`
         },
       };
-      const res = await axios.get('http://localhost:5000/api/students/all', config);
+      const res = await axios.get(`${import.meta.env.VITE_API_URL}/api/students/all`, config);
       setStudents(res.data);
     } catch (error) {
       console.error('Error fetching students:', error);
