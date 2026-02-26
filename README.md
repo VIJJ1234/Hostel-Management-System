@@ -28,6 +28,8 @@ The project is organized into three main folders:
 - **Frontend:** React.js
 - **Backend:** Node.js
 - **Database:** MongoDB
+- **Auth:** JWT,bcrypt
+-  **Deployment:** CI/CD pipelines
 
 ## License
 
