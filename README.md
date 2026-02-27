@@ -33,4 +33,4 @@ The project is organized into three main folders:
 
 ## License
 
-This project is licensed under the [](LICENSE).
+This project is licensed under the [MIT-License](LICENSE).
