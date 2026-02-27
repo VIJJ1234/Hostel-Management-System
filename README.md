@@ -31,6 +31,6 @@ The project is organized into three main folders:
 - **Auth:** JWT,bcrypt
 -  **Deployment:** CI/CD pipelines
 
-## License
+## Live
 
-This project is licensed under the [MIT License](LICENSE).
+This project is licensed under the [https://student-pi-nine.vercel.app/](LICENSE).
