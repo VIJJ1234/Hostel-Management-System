@@ -55,7 +55,7 @@ c. Restart Server:
 
 ## Questions or Need Help?
 
-If you have any questions or need further assistance, feel free to open an issue or reach out to [Tarun-Kataruka](https://github.com/Tarun-Kataruka).
+If you have any questions or need further assistance, feel free to open an issue or reach out to [V-Vijaykumar](https://github.com/VIJJ1234).
 
 We appreciate your contributions and look forward to your involvement in improving Motion-Amplification-Video!
 
